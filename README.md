@@ -14,7 +14,7 @@ To replicate the project, follow these steps:
 
 ## Instructions to utilize the files in this repository
 
-In this repository there are 
+In this repository there are 6 files,
 
 1. README.md
 2. DOCUMENTATION.md
@@ -22,6 +22,8 @@ In this repository there are
 4. combining_data.ipynb
 5. EDA_with_databricks_visualization.html
 6. spark_EDA.ipynb
+
+I executed "downloading_data.ipynb" and "combining_data.ipynb" in jupyter notebook. Once the data has been downloaded and combined I uploaded the data into databricks community edition. "EDA_with_databricks_visualization.html" and "spark_EDA.ipynb" were executed in databricks community edition but they can also be executed in jupyter notebook, please read the comments in those files to understand how to do it. 
 
 ## 1. README.md
 You are currently in README.md, this file will have all the information that is required to handle the files present in this repository like what are the different types of files that are available, what are they used for and the importance of those files.
