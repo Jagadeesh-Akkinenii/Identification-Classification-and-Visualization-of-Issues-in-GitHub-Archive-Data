@@ -36,7 +36,7 @@ The files are first downloaded as zip files which are stored in a folder called 
 ## 4. combining_data.ipynb
 Using this python notebook we combine all the different hours data which are stored in the raw folder as json files into a single json file called combined_data.json which we are going to use for the EDA process.
 
-## 5. EDA_with_databricks_visualization.ipynb
+## 5. EDA_with_databricks_visualization.html
 In databricks, we don't need to create a spark session and also there are various in-built visualization tools that we can use to visualize our data by using pyspark or sql statements. These tools are not available in any other IDE like jupyter notebook, Visual studio, Visual studio code, etc. Hence I exported the file as a html file for anyone that wants look at the available visualizations. Also note that for the visualization to work we would be required to display all the rows present in our spark dataframe even if there are 30,000+ rows(it usually truncates the rows but we would still get around 10,000 rows displayed) and exporting this file as an ipython notebook would be a bad idea as all those 10,000 rows will be directly displayed in the notebook making it unreadble.
 
 ## 6. spark_EDA.ipynb
