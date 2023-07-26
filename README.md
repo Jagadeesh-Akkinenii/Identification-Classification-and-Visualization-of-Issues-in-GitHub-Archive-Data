@@ -52,5 +52,9 @@ For this I have splitted the original dataframe into multiple dataframes by sele
 Note:  
 If you import this file into databricks community edition then you will find some visualizations that were created using databricks in-built tools (in the notebook there will be statements such as display(dataframe.limit(10) and you will be able to see something like "Visualization 1" beside "Table" if exists) in the notebook but since I have used ".limit()" on them the graphs won't be accurate and to make them accurate remove ".limi()" functions (example: remove .limit() in display(dataframe.limit(20)) 
 
-For any queries or feedback, please contact akkineni.jagadeesh@gmai.com .
+# --------Thanks for reading!--------  
+  
+Github link : https://github.com/Jagadeesh-Akkinenii/Issue-Classification-and-Visualization-for-Effective-Issue-Management/edit/main/README.md  
+  
+For any queries or feedback, please contact akkineni.jagadeesh@gmail.com .
 Contributions and suggestions are welcome.
