@@ -20,8 +20,8 @@ In this repository there are
 2. DOCUMENTATION.md
 3. downloading_data.ipynb
 4. combining_data.ipynb
-5. databricks_EDA.ipynb
-6. jupyter_notebook_EDA.ipynb
+5. EDA_with_databricks_visualization.html
+6. spark_EDA.ipynb
 
 ## 1. README.md
 You are currently in README.md, this file will have all the information that is required to handle the files present in this repository like what are the different types of files that are available, what are they used for and the importance of those files.
