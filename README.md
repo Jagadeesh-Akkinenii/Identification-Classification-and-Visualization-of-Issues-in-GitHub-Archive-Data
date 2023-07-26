@@ -36,15 +36,19 @@ The files are first downloaded as zip files which are stored in a folder called 
 ## 4. combining_data.ipynb
 Using this python notebook we combine all the different hours data which are stored in the raw folder as json files into a single json file called combined_data.json which we are going to use for the EDA process.
 
-## 5. databricks_EDA.ipynb
-In databricks, we don't need to create a spark session and also there are various inbuilt visualization tools that we can use to visualize our data when we use pyspark or sql statements. These tools are not available in any other IDE like jupyter notebook, Visual studio or Visual studio code, etc. Hence I created a separate ipython notebook for anyone that wants to import this code to their databricks account. Also note that for the visualization to work we would require to display all the rows present in our spark dataframe even if there are 30,000+ rows(it usually truncates the rows/columns but we would still get around 10,000 rows displayed) therefore I would suggest not to open this file unless it is for databricks.
+## 5. EDA_with_databricks_visualization.ipynb
+In databricks, we don't need to create a spark session and also there are various in-built visualization tools that we can use to visualize our data by using pyspark or sql statements. These tools are not available in any other IDE like jupyter notebook, Visual studio, Visual studio code, etc. Hence I exported the file as a html file for anyone that wants look at the available visualizations. Also note that for the visualization to work we would be required to display all the rows present in our spark dataframe even if there are 30,000+ rows(it usually truncates the rows but we would still get around 10,000 rows displayed) and exporting this file as an ipython notebook would be a bad idea as all those 10,000 rows will be directly displayed in the notebook making it unreadble.
 
-## 6. jupyter_notebook_EDA.ipynb
+## 6. spark_EDA.ipynb
 In this file I have created a spark session and loaded the combined_data.json file as a spark dataframe. Once the data has been converted to a spark dataframe I have done the EDA process, the main goal for this particular project is to analyze any data that can we use to get an insight and to extract issues to classify them as follows,  
 0 = bugs  
 1 = feature/enhancement  
 2 = question  
-For this I have splitted the original dataframe into multiple dataframes and analyzed each dataframe until I found the dataframe that has the column issue. Then I converted that column into a table and found a column called labels which had the required data that is "bugs", "features", "enhancements" and "questions" as row values. After this I went ahead and used matplotlib library to visualize the findings.  
+
+For this I have splitted the original dataframe into multiple dataframes by selecting and converting those columns that can be converted into dataframes(these columns usually have values that are of datatypes struct, list, etc) and analyzed each dataframe until I found the dataframe that has the column name "issue". Then I converted that column into a table and found a column in it called "labels" which had the required data that is "bugs", "features", "enhancements" and "questions" as row values. After filtering/cleaning the values and converting them in their respective tables(bugs table, enhancement table and question table) I went ahead and used matplotlib library to visualize the findings.  
+
+Note:  
+If you import this file into databricks community edition then you will find some visualizations that were created using databricks in-built tools (in the notebook there will be statements such as display(dataframe.limit(10) and you will be able to see something like "Visualization 1" beside "Table" if exists) in the notebook but since I have used ".limit()" on them the graphs won't be accurate and to make them accurate remove ".limi()" functions (example: remove .limit() in display(dataframe.limit(20)) 
 
 For any queries or feedback, please contact akkineni.jagadeesh@gmai.com .
 Contributions and suggestions are welcome.
