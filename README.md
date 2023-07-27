@@ -78,7 +78,7 @@ On following these steps you will be able to execute the code without any issues
 
 # --------Thanks for reading!--------  
   
-Github link : https://github.com/Jagadeesh-Akkinenii/Issue-Classification-and-Visualization-for-Effective-Issue-Management/edit/main/README.md  
+Github link : https://github.com/Jagadeesh-Akkinenii/Issue-Classification-and-Visualization-for-Effective-Issue-Management/  
   
 For any queries or feedback, please contact akkineni.jagadeesh@gmail.com .
 Contributions and suggestions are welcome.
