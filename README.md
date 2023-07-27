@@ -74,7 +74,7 @@ If you decide to execute the code in jupyter notebook follow these steps,
 2. Change all the statements that have "display(dataframe)" or "display(dataframe.limit(20))" to "dataframe.show()" so that the dataframes are displayed in a tabular format.
 3. Make sure the cells that contain the visualizations are set to "Disable scrolling" or "Expand output"
 
-On following these steps you will be able to execute the code without any issues although there is a possibility of some visualizations to alter because being executed in different platform.
+On following these steps you will be able to execute the code without any issues although there is a possibility of some visualizations to alter because of being executed in different platform.
 
 # --------Thanks for reading!--------  
   
