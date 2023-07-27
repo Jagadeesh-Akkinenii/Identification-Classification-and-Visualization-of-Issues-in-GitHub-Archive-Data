@@ -52,12 +52,13 @@ In this file I have created a spark session and loaded the combined_data.json fi
 2 = question  
 
 For this I have splitted the original dataframe into multiple dataframes by selecting and converting those columns that can be converted into dataframes(these columns usually have values that are of datatypes struct, list, etc) and analyzed each dataframe until I found the dataframe that has the column name "issue". Then I converted that column into a table and found a column in it called "labels" which had the required data that is "bugs", "features", "enhancements" and "questions" as row values. After filtering/cleaning the values(removing null values) and converting them into their respective tables(bugs table, enhancement table and question table) I went ahead and used matplotlib library to visualize the findings.   
+    
 Note:  
 If you import this file into databricks community edition then you will find some visualizations that were created using databricks in-built tools (in the notebook there will be statements such as display(dataframe.limit(10) and you will be able to see something like "Bar Chart" beside "Table" if exists) in the notebook but since I have used ".limit()" on them the graphs won't be accurate and to make them accurate remove ".limi()" functions (example: remove .limit() in display(dataframe.limit(20)) 
 
 ### To execute the spark_EDA.ipynb in Jupyter notebook
 The main goal of this project is to use a cloud-based platform that provides a collaborative workspace for big data analytics and data engineering for processing and analyzing large datasets using Apache Spark(PySpark).  
-Therefore I have executed the code in Databricks Community Edition, executing this code in any other platform or IDE/IDLE will result in probably the same result but the representation of the dataframe will be different. When executed in Jupyter notebook the dataframes were displayed in an unstructed format almost making it impossible to read or understand what is being displayed. To avoid this change all the statements that have "display(dataframe)" or "display(dataframe.limit(20))" to "dataframe.show()".  
+Therefore I have executed the code in Databricks Community Edition, executing this code in any other platform or IDE/IDLE will result in probably the same result but the representation of the dataframe will be different. When executed in Jupyter notebook the dataframes were displayed in an unstructured format almost making it impossible to read or understand what is being displayed. To avoid this change all the statements that have "display(dataframe)" or "display(dataframe.limit(20))" to "dataframe.show()".  
 If you decide to execute the code in jupyter notebook follow these steps,
 
 1. Read the comments in the notebook at the beginning. I have written instructions on what to uncomment and what to comment out to read the data from the local machine.
