@@ -16,14 +16,15 @@ To replicate the project, follow these steps:
 
 Apart from downloading the data and combining it into a single file which was done in Jupyter notebook, all the EDA process was done in Databricks Community Edition. Executing the EDA part in jupyter notebook will work but only after doing some changes in the code and the output can vary a little.
 
-In this repository there are 6 files,
+In this repository there are 7 files,
 
 1. README.md
-2. DOCUMENTATION.md
-3. downloading_data.ipynb
-4. combining_data.ipynb
-5. EDA_with_databricks_visualization.html
-6. spark_EDA.ipynb
+2. requirements.txt
+3. DOCUMENTATION.md
+4. downloading_data.ipynb
+5. combining_data.ipynb
+6. EDA_with_databricks_visualization.html
+7. spark_EDA.ipynb
 
 ## BRIEF EXPLANATION OF EACH FILE
 
@@ -32,20 +33,28 @@ I executed "downloading_data.ipynb" and "combining_data.ipynb" in jupyter notebo
 ## 1. README.md
 You are currently in README.md, this file will have all the information that is required to handle the files present in this repository like what are the different types of files that are available, what are they used for and the importance of those files.
 
-## 2. DOCUMENTATION
+## 2.requirements.txt
+If you are using a local machine or virtual environment you can use this to install all the necessary libraries/packages. Follow these steps to create a virtual environment and activate it,
+1. Open the cmd and navigate to desired directory.
+2. use "python -m venv env" to create a python virtual environment called env in the desired location.
+3. Once done you can activate it in cmd using "env\Scripts\activate.bat" and execute it. You will be able to see (env) in cmd now.
+4. Now type "pip install -r requirements.txt" to install all the packages mentioned in the requirements.txt at once.
+5. You can use directly type jupyter notebook and start working with the code now.
+
+## 3. DOCUMENTATION.md
 This file contains the complete documentation of this project (Issue Classification and Visualization for Effective Issue Management). This contains contents like Abstract, Introduction, Feasibility study, Literature survey and so on... .
 
-## 3. downloading_data.ipynb
+## 4. downloading_data.ipynb
 This is a ipython notebook which is supposed to be used in jupyter notebook to download the data from gharchive.org . You can change the values of the parameters from 0 to 24 to download those particular hours of data based on your requirements.  
 The files are first downloaded as zip files which are stored in a folder called archive in the same directory. Those files are later unzipped and stored in a new folder called raw as json files.
 
-## 4. combining_data.ipynb
+## 5. combining_data.ipynb
 Using this python notebook we combine all the different hours data which are stored in the raw folder as json files into a single json file called combined_data.json which we are going to use for the EDA process.
 
-## 5. EDA_with_databricks_visualization.html
+## 6. EDA_with_databricks_visualization.html
 In databricks, we don't need to create a spark session and also there are various in-built visualization tools that we can use to visualize our data by using pyspark or sql statements. These tools are not available in any other IDE like jupyter notebook, Visual studio, Visual studio code, etc. Hence I exported the file as a html file for anyone that wants look at the available visualizations. Also note that for the visualization to work we would be required to display all the rows present in our spark dataframe even if there are 30,000+ rows(it usually truncates the rows but we would still get around 10,000 rows displayed) and exporting this file as an ipython notebook would be a bad idea as all those 10,000 rows will be directly displayed in the notebook making it unreadble. To look at the contents of this file we would have to first download it and open it in a browser.
 
-## 6. spark_EDA.ipynb
+## 7. spark_EDA.ipynb
 In this file I have created a spark session and loaded the combined_data.json file as a spark dataframe. Once the data has been converted to a spark dataframe I have done the EDA process, the main goal for this particular project is to analyze any data that can we use to get an insight and to extract issues to classify them as follows,  
 0 = bugs  
 1 = feature/enhancement  
